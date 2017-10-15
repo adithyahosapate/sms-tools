@@ -4,7 +4,7 @@ sms-tools
 
 Sound analysis/synthesis tools for music applications written in python (with a bit of C) plus complementary lecture materials.
 
-How to use
+How to us
 ----------
 
 In order to use these tools you have to install python (2.7 or greater) and the following modules: ipython, numpy, matplotlib, scipy, and cython. 
