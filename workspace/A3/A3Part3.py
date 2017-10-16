@@ -49,3 +49,13 @@ def testRealEven(x):
         X (numpy array, possibly complex) = The M point DFT of dftbuffer 
     """
     ## Your code here
+    M=np.shape(x)[0]
+
+    dftbuffer=np.hstack([np.flip(x[:int(M/2)+1],axis=-1), np.flip(x[int(M/2)+1:],axis=-1)])
+
+    X=fft(dftbuffer)
+    for point in X:
+        if abs(np.imag(point))>1e-6:
+            return (False,dftbuffer,X)
+    return (True,dftbuffer,X)    
+    

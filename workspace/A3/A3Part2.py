@@ -60,8 +60,7 @@ def optimalZeropad(x, fs, f):
     M=x.shape[0]
     N=fs//f
     padding_length=N-M%N
-    print(padding_length)
-    x=np.hstack([x,np.zeros(padding_length)])
+    x=np.hstack([x,np.zeros(int(padding_length))])
     X=abs(fft(x,M+padding_length))
     return 20*np.log10(X[:int((M+padding_length)/2+1)])
 
